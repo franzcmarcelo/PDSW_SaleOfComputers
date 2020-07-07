@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sale of Computers</title>
   <style>
@@ -11,7 +12,11 @@
   </style>
 </head>
 <body>
-  <h2 class="my-4" style="text-align: center; font-weight: 600;">Sale of Computers</h1>
+  <h2 class="my-4"
+      style="
+      text-align: center;
+      font-weight: 600;
+      ">Sale of Computers</h2>
   <hr class="mb-4">
 
   <p class="ml-5">Minimum Computer Requirements</p>
@@ -63,10 +68,20 @@
             <!-- items -->
           </div>
         </div>
-            <!-- Proforma -->
       </main>
-      <aside class="col-sm-4 fixed-top ml-auto">
-        <h2>Proforma</h2>
+      <!-- Shopping Cart -->
+      <div class="container">
+      <aside
+        class="col-sm-4 fixed-top ml-auto"
+        style="
+        background-color: rgb(154, 253, 220);
+        padding: 10px;
+        margin-top: 86px;
+        ">
+        <h2>
+          Shopping Cart
+          <i class="fa fa-shopping-cart"></i>
+        </h2>
         <!-- Elementos del carrito -->
         <ul id="proforma" class="list-group"></ul>
         <hr>
@@ -85,6 +100,7 @@
           >Check
         </button>
       </aside>
+      </div>
     </div>
   </div>
 

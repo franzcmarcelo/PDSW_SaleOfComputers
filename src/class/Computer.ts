@@ -3,13 +3,13 @@ import { iValidator } from '../interfaces/iValidator.js'
 
 export class Computer implements iValidator{
 
-    iValidator: Function;
-    isValidate: boolean = false;
-    componentsSelected: Component[] = [];
-    typeDP: Array<Component> = [];
-    typeID: Array<Component> = [];
-    typeOD: Array<Component> = [];
-    typeSD: Array<Component> = [];
+    public iValidator: Function;
+    public isValidate: boolean = false;
+    public componentsSelected: Component[] = [];
+    public typeDP: Array<Component> = [];
+    public typeID: Array<Component> = [];
+    public typeOD: Array<Component> = [];
+    public typeSD: Array<Component> = [];
 
     constructor(){
         this.iValidator = () => {

@@ -2,7 +2,7 @@ import { Component } from "./component.js";
 
 export class Proforma {
 
-    finalPrice: number;
+    public finalPrice: number;
     constructor(){
         this.finalPrice = 0
     }

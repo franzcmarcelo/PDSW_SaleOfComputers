@@ -36,7 +36,7 @@ function renderCPUs() {
         card_price.textContent = `S/.${info.price}`;
         let btnAdd = document.createElement('button');
         btnAdd.classList.add('btn', 'btn-primary', 'btn-sm', 'mb-2');
-        btnAdd.textContent = 'Add Proforma';
+        btnAdd.textContent = 'Add +';
         btnAdd.setAttribute('identificador', info['id']);
         btnAdd.addEventListener('click', addComponent);
         car_body.appendChild(card_title);
@@ -82,7 +82,7 @@ function renderInputDevices() {
         card_price.textContent = `S/.${info.price}`;
         let btnAdd = document.createElement('button');
         btnAdd.classList.add('btn', 'btn-primary', 'btn-sm', 'mb-2');
-        btnAdd.textContent = 'Add Proforma';
+        btnAdd.textContent = 'Add +';
         btnAdd.setAttribute('identificador', info['id']);
         btnAdd.addEventListener('click', addComponent);
         car_body.appendChild(card_title);
@@ -127,7 +127,7 @@ function renderOutputDevices() {
         card_price.textContent = `S/.${info.price}`;
         let btnAdd = document.createElement('button');
         btnAdd.classList.add('btn', 'btn-primary', 'btn-sm', 'mb-2');
-        btnAdd.textContent = 'Add Proforma';
+        btnAdd.textContent = 'Add +';
         btnAdd.setAttribute('identificador', info['id']);
         btnAdd.addEventListener('click', addComponent);
         car_body.appendChild(card_title);
@@ -172,7 +172,7 @@ function renderSpecialDevices() {
         card_price.textContent = `S/.${info.price}`;
         let btnAdd = document.createElement('button');
         btnAdd.classList.add('btn', 'btn-primary', 'btn-sm', 'mb-2');
-        btnAdd.textContent = 'Add Proforma';
+        btnAdd.textContent = 'Add +';
         btnAdd.setAttribute('identificador', info['id']);
         btnAdd.addEventListener('click', addComponent);
         car_body.appendChild(card_title);

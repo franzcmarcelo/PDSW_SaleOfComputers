@@ -45,7 +45,7 @@ function renderCPUs(){
 
         let btnAdd = document.createElement('button') as HTMLButtonElement;
         btnAdd.classList.add('btn', 'btn-primary', 'btn-sm', 'mb-2')
-        btnAdd.textContent='Add Proforma';
+        btnAdd.textContent='Add +';
         btnAdd.setAttribute('identificador', info['id']);
         btnAdd.addEventListener('click', addComponent);
 
@@ -99,7 +99,7 @@ function renderInputDevices() {
 
         let btnAdd = document.createElement('button') as HTMLButtonElement;
         btnAdd.classList.add('btn', 'btn-primary', 'btn-sm', 'mb-2')
-        btnAdd.textContent='Add Proforma';
+        btnAdd.textContent='Add +';
         btnAdd.setAttribute('identificador', info['id']);
         btnAdd.addEventListener('click', addComponent);
 
@@ -152,7 +152,7 @@ function renderOutputDevices() {
 
         let btnAdd = document.createElement('button') as HTMLButtonElement;
         btnAdd.classList.add('btn', 'btn-primary', 'btn-sm', 'mb-2')
-        btnAdd.textContent='Add Proforma';
+        btnAdd.textContent='Add +';
         btnAdd.setAttribute('identificador', info['id']);
         btnAdd.addEventListener('click', addComponent);
 
@@ -205,7 +205,7 @@ function renderSpecialDevices() {
 
         let btnAdd = document.createElement('button') as HTMLButtonElement;
         btnAdd.classList.add('btn', 'btn-primary', 'btn-sm', 'mb-2')
-        btnAdd.textContent='Add Proforma';
+        btnAdd.textContent='Add +';
         btnAdd.setAttribute('identificador', info['id']);
         btnAdd.addEventListener('click', addComponent);
 

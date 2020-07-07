@@ -1,5 +1,5 @@
 import { Computer } from './class/Computer.js';
-import { Proforma } from './class/Proforma.js';
+import { Proforma } from './class/ShoppingCart.js';
 import { allDB } from './ComponentesDB/AllDB.js';
 import { render } from './utils/render.js';
 let computer = new Computer();
@@ -19,8 +19,8 @@ let $Modal_Img = document.createElement('img');
 $Modal_Img.classList.add('my-4', 'w-90px');
 let $Modal_Btn = document.querySelector('#Modal-button');
 render();
-function renderProforma() {
-    // Id de los componentes renderizados en proforma:
+function renderShoppingCart() {
+    // Id de los componentes renderizados en shoppingCart:
     console.log(IdsAddedComponents);
     $proforma.textContent = '';
     for (const component of computer.componentsOfComputer) {
@@ -54,7 +54,7 @@ function deleteComponent() {
             computer.removeComponent(allDB[IdNumber - 1]);
         }
     }
-    renderProforma();
+    renderShoppingCart();
 }
 export function addComponent() {
     // > typeOf(id) = String
@@ -66,20 +66,23 @@ export function addComponent() {
     // Componente Agregado: allDB[id-1]
     let IdNumber = Number.parseInt(idNotNull);
     computer.addComponent(allDB[IdNumber - 1]);
-    renderProforma();
+    renderShoppingCart();
 }
 function renderModal() {
     $Modal_Btn.classList.remove('btn-outline-danger');
     $Modal_Btn.classList.remove('btn-outline-success');
+    $Modal_Btn.textContent = '';
     if (computer.isValidate) {
         $Modal_Message.textContent = 'The minimum computer requirements WERE MET.';
         $Modal_Img.src = 'https://image.flaticon.com/icons/svg/391/391175.svg';
         $Modal_Btn.classList.add('btn-outline-success');
+        $Modal_Btn.textContent = 'Comprar';
     }
     else {
         $Modal_Message.textContent = 'The minimum computer requirements WERE NOT MET.';
         $Modal_Img.src = 'https://image.flaticon.com/icons/svg/391/391116.svg';
         $Modal_Btn.classList.add('btn-outline-danger');
+        $Modal_Btn.textContent = 'Corregir';
     }
     $Modal_Content.appendChild($Modal_Message);
     $Modal_Image.appendChild($Modal_Img);
