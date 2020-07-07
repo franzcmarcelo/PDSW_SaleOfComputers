@@ -1,8 +1,6 @@
-import { Component } from './class/component'
 import { Computer } from './class/Computer.js'
 import { Proforma } from './class/Proforma.js'
 import { allDB } from './ComponentesDB/AllDB.js'
-
 
 import { render } from './utils/render.js'
 
@@ -10,11 +8,22 @@ let computer = new Computer()
 let proforma = new Proforma()
 let IdsAddedComponents: String[] = [];
 
-render()
-
+// HTML Elements
 let $proforma = document.querySelector('#proforma') as HTMLDivElement;
 let $TotalPrice = document.querySelector('#total') as HTMLSpanElement;
+// Verify
 let $BtnComprobar = document.querySelector('#BtnComprobar') as HTMLButtonElement;
+$BtnComprobar.addEventListener('click',verify)
+let $Modal_Content = document.querySelector('#Modal-Content') as HTMLDivElement;
+let $Modal_Message = document.createElement('div') as HTMLDivElement;
+$Modal_Message.classList.add('modal-body', 'text-center')
+
+let $Modal_Image = document.querySelector('#Modal-Image') as HTMLDivElement;
+let $Modal_Img = document.createElement('img') as HTMLImageElement;
+$Modal_Img.classList.add('my-4','w-90px')
+let $Modal_Btn = document.querySelector('#Modal-button') as HTMLButtonElement;
+
+render()
 
 function renderProforma() {
     // Id de los componentes renderizados en proforma:
@@ -75,12 +84,23 @@ export function addComponent(this: HTMLButtonElement) {
     renderProforma()
 }
 
-// computer.componentsOfComputer:
-// Devuelve los componentes seleccionados (los que se renderizan en proforma)
-
-$BtnComprobar.addEventListener('click',verify)
-function verify() {
-    computer.countDevices()
-    computer.iValidator()
+function renderModal() {
+    $Modal_Btn.classList.remove('btn-outline-danger')
+    $Modal_Btn.classList.remove('btn-outline-success')
+    if (computer.isValidate) {
+        $Modal_Message.textContent='The minimum computer requirements WERE MET.';
+        $Modal_Img.src='https://image.flaticon.com/icons/svg/391/391175.svg'
+        $Modal_Btn.classList.add('btn-outline-success')
+    }else{
+        $Modal_Message.textContent='The minimum computer requirements WERE NOT MET.';
+        $Modal_Img.src='https://image.flaticon.com/icons/svg/391/391116.svg'
+        $Modal_Btn.classList.add('btn-outline-danger')
+    }
+    $Modal_Content.appendChild($Modal_Message)
+    $Modal_Image.appendChild($Modal_Img)
 }
 
+function verify() {
+    computer.iValidator()
+    renderModal()
+}

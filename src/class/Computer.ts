@@ -13,6 +13,7 @@ export class Computer implements iValidator{
 
     constructor(){
         this.iValidator = () => {
+            this.countDevices()
             this.validator()
         }
     }
@@ -21,20 +22,12 @@ export class Computer implements iValidator{
         this.isValidate=false;
         if (this.typeDP.length>=1) {
             if (this.typeSD.length>=1) {
-                console.log('Correcto!');
                 this.isValidate=true;
             }else{
                 if (this.typeID.length>=1 && this.typeOD.length>=1) {
-                    console.log('Correcto');
                     this.isValidate=true;
                 }
-                else{
-                    console.log('Mal');
-                }
             }
-        }
-        else{
-            console.log('Mal');
         }
     }
 
@@ -72,6 +65,7 @@ export class Computer implements iValidator{
         this.componentsSelected.splice(i, 1)
     }
 
+    // Todos los componentes seleccionados para armar un Computer
     get componentsOfComputer(): Component[]{
         return this.componentsSelected;
     }
