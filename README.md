@@ -1,4 +1,4 @@
-## Sale Of Computers - Lab03s
+## Sale Of Computers - Lab03
 A project of the PDSW course
 
 URL: https://franzcmarcelo.github.io/PDSW_SaleOfComputers/dist/index.html
