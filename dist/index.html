@@ -65,33 +65,52 @@
         </div>
             <!-- Proforma -->
       </main>
-      <aside class="mt-4 col-sm-4">
+      <aside class="col-sm-4 fixed-top ml-auto">
         <h2>Proforma</h2>
         <!-- Elementos del carrito -->
         <ul id="proforma" class="list-group"></ul>
         <hr>
         <!-- Precio total -->
-        <p class="text-right">Total: S/ <span id="total"></span>.00</p>
-        <button class="btn btn-outline-dark btn-md" id="BtnComprobar">Check</button>
-    </aside>
+        <p class="text-right">
+          Total: S/
+          <span id="total"></span>
+          .00
+        </p>
+        <button
+          class="btn btn-outline-dark btn-md"
+          id="BtnComprobar"
+          data-toggle="modal"
+          data-target="#Modal"
+          type="button"
+          >Check
+        </button>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="Modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="d-flex justify-content-center" id="Modal-Image"></div>
+        <div id="Modal-Content"></div>
+        <div class="modal-footer">
+          <button
+            id="Modal-button"
+            type="button"
+            class="btn btn-md"
+            data-dismiss="modal"
+            >Ok
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script type="module" src="./index.js"></script>
 </body>
 </html>
