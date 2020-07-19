@@ -1,4 +1,4 @@
-# Sale Of Computers - Lab03: LSP, ISP y DIP
+# Sale Of Computers - Laboratory 03
 A project of the PDSW course
 
 ## Implementing:
