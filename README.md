@@ -1,4 +1,4 @@
-# Sale Of Computers - Laboratory 03
+# Laboratory 03 - Sale Of Computers
 A project of the PDSW course
 
 ## Implementing:
